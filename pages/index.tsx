@@ -20,7 +20,7 @@ const Home = ({ tweets }: Props) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main className="m-auto grid w-5/6 grid-cols-9">
+      <main className="grid w-full grid-cols-9 m-0 lg:w-5/6 lg:m-auto">
         {/* sideBar */}
         <SideBar />
         {/* Feed */}
