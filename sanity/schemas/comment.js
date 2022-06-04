@@ -19,6 +19,16 @@ export default {
       type: 'string',
     },
     {
+      name: 'image',
+      title: 'Image',
+      type: 'string',
+    },
+    {
+      name: 'handle',
+      title: 'Handle',
+      type: 'string',
+    },
+    {
       name: 'tweet',
       title: 'Tweet',
       description: 'Reference the Tweet the comment is associated to:',

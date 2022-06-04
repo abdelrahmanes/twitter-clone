@@ -16,6 +16,9 @@ module.exports = {
         12: '12rem',
         '5/6': '83.33333%',
       },
+      borderWidth: {
+        5: '5px',
+      },
     },
   },
   plugins: [],
