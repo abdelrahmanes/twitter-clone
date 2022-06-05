@@ -1,6 +1,7 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Toaster } from 'react-hot-toast'
 import Feed from '../components/Feed'
 import SideBar from '../components/SideBar'
 import Widgets from '../components/Widgets'
@@ -19,8 +20,8 @@ const Home = ({ tweets }: Props) => {
         <title>Twitter</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-
-      <main className="grid w-full grid-cols-9 m-0 lg:w-5/6 lg:m-auto">
+      <Toaster />
+      <main className="m-0 grid w-full grid-cols-9 lg:m-auto lg:w-5/6">
         {/* sideBar */}
         <SideBar />
         {/* Feed */}
