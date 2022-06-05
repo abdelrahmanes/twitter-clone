@@ -19,7 +19,10 @@ function Feed({ tweets: tweetsProp }: Props) {
     })
   }
   return (
-    <div className="col-span-7 h-screen overflow-y-scroll border-x lg:col-span-5">
+    <div
+      id="scorll"
+      className=" col-span-7 h-screen overflow-y-scroll border-x xl:col-span-5"
+    >
       <div className="flex items-center justify-between">
         <h1 className="p-5 pb-0 text-lg font-bold">Home</h1>
         <div onClick={handleRefresh} className="">
@@ -31,7 +34,7 @@ function Feed({ tweets: tweetsProp }: Props) {
       <div>
         <TweetBox />
       </div>
-      <div>
+      <div className="border-b border-gray-200">
         {tweets.map((tweet) => {
           return <TweetComponent key={tweet._id} tweet={tweet} />
         })}

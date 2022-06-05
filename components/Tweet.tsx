@@ -30,27 +30,32 @@ function Tweet({ tweet }: Props) {
   console.log(comments)
 
   return (
-    <div className="p-5 pb-0 border-y">
+    <div className="cursor-pointer border-t p-5 pb-0 transition duration-200 hover:bg-gray-50">
       <div className="flex items-start justify-start space-x-2">
-        <div className="w-12 h-12">
+        <div className="h-12 w-12">
           <img
             src={tweet.profileImage}
-            className="object-cover w-full rounded-full "
+            className="w-full rounded-full object-cover "
           />
         </div>
         <div className="flex flex-col" style={{ width: 'calc(100% - 50px)' }}>
           <div className="flex items-start justify-start gap-1 ">
-            <p>{tweet.username}</p>
-            <p className="text-sm text-gray-400">
-              @{tweet.handle} <span>.</span>
-            </p>
+            <div className="flex items-center  gap-2 sm:gap-0">
+              <div className="flex  items-center justify-start ">
+                <p>{tweet.username}</p>
+                <p className=" mx-1 hidden text-sm text-gray-400 sm:inline">
+                  @{tweet.handle}{' '}
+                  <span className="mr-1 hidden md:inline">.</span>
+                </p>
+              </div>
 
-            <TimeAgo
-              date={tweet._createdAt}
-              className="text-sm text-gray-400"
-            />
+              <TimeAgo
+                date={tweet._createdAt}
+                className="text-sm text-gray-400"
+              />
+            </div>
             <div className="ml-auto">
-              <DotsHorizontalIcon className="w-5 h-5 text-gray-400 " />
+              <DotsHorizontalIcon className="h-5 w-5 text-gray-400 " />
             </div>
           </div>
           <div className="mt-1">
@@ -59,27 +64,27 @@ function Tweet({ tweet }: Props) {
               <div className="mt-4">
                 <img
                   src={tweet.image}
-                  className="object-cover w-full rounded-lg shadow-sm max-h-80"
+                  className="max-h-80 w-full rounded-lg object-cover shadow-sm"
                 />
               </div>
             )}
 
-            <div className="flex justify-between mt-2 mb-3 space-x-5 max-w-5/6">
+            <div className="mt-2 mb-3 flex max-w-5/6 justify-between space-x-5">
               <div
-                className="flex items-center justify-start p-2 text-gray-400 rounded-full cursor-pointer hover:bg-blue-100 hover:text-primary_hover"
+                className="flex cursor-pointer items-center justify-start rounded-full p-2 text-gray-400 hover:bg-blue-100 hover:text-primary_hover"
                 onClick={toggleShowComments}
               >
-                <ChatAlt2Icon className="w-5 h-5 " />
+                <ChatAlt2Icon className="h-5 w-5 " />
                 <div>{comments.length}</div>
               </div>
-              <div className="p-2 text-gray-400 rounded-full cursor-pointer hover:bg-retweet hover:bg-opacity-10 hover:text-retweet">
-                <SwitchHorizontalIcon className="w-5 h-5 cursor-pointer " />
+              <div className="cursor-pointer rounded-full p-2 text-gray-400 hover:bg-retweet hover:bg-opacity-10 hover:text-retweet">
+                <SwitchHorizontalIcon className="h-5 w-5 cursor-pointer " />
               </div>
-              <div className="p-2 text-gray-400 rounded-full cursor-pointer hover:bg-like hover:bg-opacity-10 hover:text-like">
-                <HeartIcon className="w-5 h-5 cursor-pointer " />
+              <div className="cursor-pointer rounded-full p-2 text-gray-400 hover:bg-like hover:bg-opacity-10 hover:text-like">
+                <HeartIcon className="h-5 w-5 cursor-pointer " />
               </div>
-              <div className="p-2 text-gray-400 rounded-full cursor-pointer hover:bg-blue-100 hover:text-primary_hover">
-                <UploadIcon className="w-5 h-5 cursor-pointer " />
+              <div className="cursor-pointer rounded-full p-2 text-gray-400 hover:bg-blue-100 hover:text-primary_hover">
+                <UploadIcon className="h-5 w-5 cursor-pointer " />
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ import {
 import SideBarRow from './SideBarRow'
 function SideBar() {
   return (
-    <div className="col-span-2 flex h-screen flex-col items-center  gap-2 px-4 lg:items-start">
+    <div className="col-span-2 flex h-screen flex-col items-center  gap-2 md:pl-16 lg:items-start">
       <div className="m-2 h-12 w-12 cursor-pointer p-2 hover:rounded-full hover:bg-blue-100">
         <img className="w-full " src="https://links.papareact.com/drq" />
       </div>
@@ -34,7 +34,7 @@ function SideBar() {
       <button className="rounded-full bg-primary p-3   text-white transition-all duration-200 hover:bg-primary_hover lg:hidden">
         <PencilIcon className="h-7 w-7 " />
       </button>
-      <div className=" mt-auto mb-5 flex cursor-pointer items-center justify-between space-x-4  rounded-full  p-2 transition-all  duration-150 hover:bg-secondary_hover lg:py-2">
+      <div className=" mt-auto mb-5 flex cursor-pointer items-center justify-between space-x-4  rounded-full  p-2 transition-all  duration-150 hover:bg-secondary_hover lg:py-2 ">
         <div className="h-12 w-12 ">
           <img src="/user.jpg" className="w-full rounded-full object-cover" />
         </div>
